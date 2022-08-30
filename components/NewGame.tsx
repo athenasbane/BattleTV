@@ -2,18 +2,7 @@ import React, {useState} from 'react';
 
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 import Player from './Player';
-
-interface IPlayer {
-  name: string;
-  primaryPoints: number;
-  secondaryPoints: number;
-}
-
-class PlayerModel implements IPlayer {
-  name = '';
-  primaryPoints = 0;
-  secondaryPoints = 0;
-}
+import {PlayerModel} from '../models/PlayerModel.model';
 
 const NewGame = ({navigation}) => {
   const [playerOne, setPlayerOne] = useState(new PlayerModel());
@@ -27,6 +16,7 @@ const NewGame = ({navigation}) => {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
+      marginTop: 100,
     },
     button: {
       borderRadius: 5,

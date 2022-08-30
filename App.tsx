@@ -35,7 +35,7 @@ const App = () => {
       source={require('./assets/images/background.jpg')}
       style={styles.backgroundImage}>
       <NavigationContainer theme={navTheme}>
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="NewGame" component={NewGame} />
         </Stack.Navigator>
